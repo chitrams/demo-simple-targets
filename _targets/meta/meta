@@ -1,3 +1,12 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-file|stem|352bc232d266183c|2608b7af3f34ba66|2c530c1562a7fbd1|1735323524|./data/raw_data_2024-08-24.csv|t19977.0693316632s|353f2d94bc8c3761|5591|file|local|vector|||0.411||
-data|stem|63a4f2c2546f2aea|4caa6fb8971eb74a|18624cb9402aa319|33550471||t19977.2453876042s|ae4015221d4454a5|1578|rds|local|vector|||0.306||
+data|stem|73bcf53511e30492|4caa6fb8971eb74a|40cbbe0520d10934|33550471||t19977.3470962596s|8282224de3c290c3|1722|rds|local|vector|||0.137||
+file|stem|9b45678d1bf7a024|2608b7af3f34ba66|2c530c1562a7fbd1|1735323524|./data/raw_data_2024-08-24.csv|t19977.3462210332s|1a73a37fc0881f0a|5549|file|local|vector|||0.198||
+fit_model|function|33bc949b2e3edca3|||||||||||||||
+groupvar|stem|618c1c82f0a4e5ec|57abfd30c5d89aaa|2c530c1562a7fbd1|-1196822960||t19977.3561398817s|5af7efb62b7d05c3|60|rds|local|vector|||0||
+model|stem|206a652f5419af48|a1d3c11ed8c904c3|4af4b3d635ac988e|808688450||t19977.3561434294s|425b6f3756c48f41|117|rds|local|vector|||0.001||
+penguin_table|function|bbe5eabb9bbb427c|||||||||||||||
+plot|stem|ce65cc8664854adc|4a1107eb88224a0a|786e2bfdd8bd4964|874984291||t19977.3561439057s|efeff37f9751b98d|90620|rds|local|vector|||0.019|aes_string was deprecated in ggplot2 3.0.0.ℹ Please use tidy evaluation idioms with aes.ℹ See also vignetteggplot2inpackages for more information.|
+plot_model|function|478edef0df233b83|||||||||||||||
+table|stem|37ef8df4169b15a3|e289257c844f212d|c27d5a4c4210600b|974367663||t19977.3572014456s|0ac49d9bed62c768|27513|rds|local|vector|||0.35|Using an external vector in selections was deprecated in tidyselect 1.1.0.ℹ Please use all_of or any_of instead.   Was  data  selectxvar   Now  data  selectall_ofxvarSee httpstidyselect.rlib.orgreferencefaqexternalvector.html.. Using an external vector in selections was deprecated in tidyselect 1.1.0.ℹ Please use all_of or any_of instead.   Was  data  selectyvar   Now  data  selectall_ofyvarSee httpstidyselect.rlib.orgreferencefaqexternalvector.html.. Using an external vector in selections was deprecated in tidyselect 1.1.0.ℹ Please use all_of or any_of instead.   Was  data  selectgroupvar   Now  data  selectall_ofgroupvarSee httpstidyselect.rlib.orgreferencefaqexternalvector.html.|
+xvar|stem|5c4dfb814fe07573|d0c38c5a497dbd99|2c530c1562a7fbd1|-1722266469||t19977.3561397814s|0f5cc5be67b9db73|64|rds|local|vector|||0.195||
+yvar|stem|a491f683dd85c73c|67d98e1259a07248|2c530c1562a7fbd1|-280195034||t19977.3561398671s|580e0375f1117643|70|rds|local|vector|||0||
