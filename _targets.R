@@ -18,15 +18,15 @@ source("R/functions.R")
 
 # Target objects ------------------------------
 
-summarize_data <- function(dataset) {
-  colMeans(dataset)
-}
-
-# Set target-specific options such as packages:
-# tar_option_set(packages = "utils") # nolint
-
-# End this file with a list of target objects.
-list(
-  tar_target(data, data.frame(x = sample.int(100), y = sample.int(100))),
-  tar_target(data_summary, summarize_data(data)) # Call your custom functions.
-)
+tar_assign({
+  
+  file <- tar_target(
+    "./data/raw_data_2024-08-24.csv",
+    format = "file")
+  
+  data <- read_csv(file) |>
+    tar_target()
+  
+  table <- 
+  
+})
