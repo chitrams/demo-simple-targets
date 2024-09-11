@@ -10,12 +10,18 @@ penguin_table <- function(data, ..., groupvar) {
 }
 
 fit_model <- function(data, xvar, yvar) {
+  
+  # A function to fit a simple linear model
+  
   lm(yvar ~ xvar, data) %>% 
     coefficients()
 }
 
-plot_model <- function(model, data, xvar, yvar) {
+plot_model <- function(model, data, xvar, yvar, groupvar) {
+  
+  # A function to make a scatter plot with the model fitted
+  
   ggplot(data) +
-    geom_point(aes(x = xvar, y = yvar)) +
+    geom_point(aes(x = xvar, y = yvar, color = groupvar)) +
     geom_abline(intercept = model[1], slope = model[2])
 }
