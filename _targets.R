@@ -7,7 +7,9 @@ library(tarchetypes)
 tar_option_set(
   packages = c("tidyverse",
                "purrr",
-               "palmerpenguins")
+               "palmerpenguins",
+               "gtsummary",
+               "rlang")
 )
 
 # Set up a workspace when our code errors
@@ -27,6 +29,29 @@ tar_assign({
   data <- read_csv(file) |>
     tar_target()
   
-  table <- 
+  table <- penguin_table(
+    data = data,
+    island,
+    bill_length_mm,
+    bill_depth_mm,
+    body_mass_g,
+    groupvar = "island"
+  ) |>
+    tar_target()
+  
+  model <- fit_model(
+    data = data,
+    xvar = body_mass_g,
+    yvar = bill_length_mm
+  ) |>
+    tar_target()
+  
+  plot <- plot_model(
+    model = model,
+    data = data,
+    xvar = body_mass_g,
+    yvar = bill_length_mm,
+    groupvar = "island"
+  )
   
 })
