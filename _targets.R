@@ -1,14 +1,23 @@
-library(targets)
-# This is an example _targets.R file. Every
-# {targets} pipeline needs one.
-# Use tar_script() to create _targets.R and tar_edit()
-# to open it again for editing.
-# Then, run tar_make() to run the pipeline
-# and tar_read(data_summary) to view the results.
+# Set-up ------------------------------
 
-# Define custom functions and other global objects.
-# This is where you write source(\"R/functions.R\")
-# if you keep your functions in external scripts.
+library(targets)
+library(tarchetypes)
+
+# Load packages needed for this project
+tar_option_set(
+  packages = c("tidyverse",
+               "purrr",
+               "palmerpenguins")
+)
+
+# Set up a workspace when our code errors
+tar_option_set(workspace_on_error = TRUE)
+
+# Load functions to be used in our project
+source("R/functions.R")
+
+# Target objects ------------------------------
+
 summarize_data <- function(dataset) {
   colMeans(dataset)
 }
